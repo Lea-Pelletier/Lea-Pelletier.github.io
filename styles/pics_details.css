@@ -1,0 +1,54 @@
+/* Container de la galerie */
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Wrapper pour chaque image */
+.photo-container .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Portrait images (alignées par deux) */
+.photo-container .image-wrapper.portrait {
+    width: calc(50% - 10px);
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Paysage images (pleine largeur) */
+.photo-container .image-wrapper.landscape {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image styling */
+.photo-container .image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Responsive: Toujours une image par ligne sur mobile */
+@media (max-width: 768px) {
+    .photo-container .image-wrapper.portrait,
+    .photo-container .image-wrapper.landscape {
+        width: 100%;
+    }
+}
