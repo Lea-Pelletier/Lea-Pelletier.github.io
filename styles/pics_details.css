@@ -45,6 +45,10 @@
     border-radius: 10px;
 }
 
+.pic-border {
+    border: 1px solid #424242;
+}
+
 /* Responsive: Toujours une image par ligne sur mobile */
 @media (max-width: 768px) {
     .photo-container .image-wrapper.portrait,
